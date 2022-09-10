@@ -21,7 +21,7 @@ def cdr(pair):
 
 
 if __name__ == "__main__":
-    a=int(input())
-    b=int(input())
+    a=3
+    b=4
     print(cdr(cons(a,b)))
     print(car(cons(a,b)))
