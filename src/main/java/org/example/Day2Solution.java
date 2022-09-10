@@ -34,30 +34,14 @@ public class Day2Solution {
         if(countZeroes ==2){
             return result;
         }
-        int[] prefixProduct = new int[arr.length];
-        for(int i=0;i< arr.length;i++){
-            if(i==0){
-                prefixProduct[i] = arr[i];
-            }else{
-                prefixProduct[i] = prefixProduct[i-1]*arr[i];
+        for(int i=0;i<arr.length;i++){
+            int internalPro = 1;
+            for(int j=0;j<arr.length;j++){
+                if(i!=j){
+                   internalPro*=arr[j];
+                }
             }
-        }
-        int[] suffixProduct = new int[arr.length];
-        for(int i= arr.length-1;i>=0;i--){
-            if(i==arr.length-1){
-                suffixProduct[i]=arr[i];
-            }else{
-                suffixProduct[i]=suffixProduct[i+1]*arr[i];
-            }
-        }
-        for(int i=0;i< arr.length;i++){
-            if(i==0){
-                result[i] = suffixProduct[i+1];
-            } else if (i == arr.length-1) {
-                result[i] = prefixProduct[i-1];
-            }else{
-                result[i] = prefixProduct[i-1]*suffixProduct[i+1];
-            }
+            result[i]=internalPro;
         }
         return result;
     }
