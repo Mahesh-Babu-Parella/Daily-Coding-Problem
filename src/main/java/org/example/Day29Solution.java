@@ -1,6 +1,5 @@
 package org.example;
 
-import com.sun.xml.internal.ws.util.StringUtils;
 
 /*
 This problem was asked by Amazon.

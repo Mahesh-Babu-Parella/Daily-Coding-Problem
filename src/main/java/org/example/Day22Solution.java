@@ -1,6 +1,5 @@
 package org.example;
 
-import com.sun.org.apache.xerces.internal.xs.StringList;
 
 import java.util.ArrayList;
 import java.util.List;
